@@ -36,18 +36,26 @@ function Layout({ children, title = "World Ranks" }) {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <button onClick={switchTheme} className={styles.themeSwitcher}>
+        <Brightness6Rounded />
+      </button>
 
       <header className={styles.header}>
-        <Link href="/">MhShoghi &hearts; YegSalehi</Link>
+        <Link href="/">
+          <div className={styles.header_logo}>
+            <div style={{ display: "flex" }}>MhShoghi</div>
 
-        <button className={styles.themeSwitcher} onClick={switchTheme}>
-          <Brightness6Rounded />
-        </button>
+            {/* <div style={{ display: "flex", justifyContent: "center" }}>
+              &hearts;
+            </div> */}
+            <div style={{ display: "flex" }}>YegSalehi</div>
+          </div>
+        </Link>
       </header>
 
       <main className={styles.main}>{children}</main>
 
-      <footer className={styles.footer}>MhShogh &hearts; YegSalehi</footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }

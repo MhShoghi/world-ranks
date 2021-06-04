@@ -16,8 +16,16 @@
   cursor: pointer;
 }
 
+.header_logo {
+  background-color: var(--background-color-dark);
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .footer {
   margin-top: 32px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 0.75rem;
 }
